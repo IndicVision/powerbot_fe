@@ -1,0 +1,92 @@
+body {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    margin: 0;
+    background-color: #1a1a1a;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #212121;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #007BFF;
+}
+
+#chats {
+    width: 100%;
+    height: 94.5vh;
+    overflow-y: auto;
+}
+
+.response {
+    color: white;
+    margin: 2%;
+    clear: both;
+    text-indent: 3%;
+}
+
+#logo {
+    height: 2.5vh;
+    border-radius: 100px;
+    margin-right: 15px;
+    position: relative;
+    top: 0.5vh;
+}
+
+.message {
+    color: white;
+    background-color: #50a3f0;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 2%;
+    max-width: 60%;
+    float: right;
+}
+
+.instruct-msg {
+    color: rgba(255, 255, 255, 0.237);
+    padding: 5%;
+}
+
+.input-box {
+    display: flex;
+    width: 96%;
+    align-items: center;
+    border: none;
+    border-radius: 25px;
+    background-color: #272727;
+    position: absolute;
+    bottom: 2%;
+    margin: 0 2%;
+}
+
+.input-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #272727;
+    color: white;
+    text-indent: 29px;
+}
+
+.input-box button {
+    background-color: #272727;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.input-box button:hover {
+    background-color: #50a3f0;
+}
