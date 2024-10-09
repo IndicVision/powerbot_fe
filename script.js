@@ -1,5 +1,5 @@
 // DOM
-const url = "http://localhost:5000"
+const url = "https://indic-powerbot-abb774c3994e.herokuapp.com"
 const chatBox = document.getElementById('chats');
 var messages = [{
     "role":"system",
