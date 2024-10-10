@@ -18,6 +18,9 @@ inputField.addEventListener('keypress', function(event) {
 if (chatBox.childNodes.length === 3) {
     instructionMsgDiv = document.createElement('div');
     instructionMsgDiv.classList.add('instruct-msg');
+    instructionMsgDiv.innerHTML = `
+        <h2 style="text-align: center;">Loading...</h2>
+    `;
     chatBox.appendChild(instructionMsgDiv);
 }
 
