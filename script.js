@@ -18,13 +18,37 @@ inputField.addEventListener('keypress', function(event) {
 if (chatBox.childNodes.length === 3) {
     instructionMsgDiv = document.createElement('div');
     instructionMsgDiv.classList.add('instruct-msg');
-    instructionMsgDiv.innerHTML = `
-        <h2 style="text-align: center;">PowerBot</h2>
-    `;
     chatBox.appendChild(instructionMsgDiv);
 }
 
 // API Calls
+
+async function checkAPIStatus(){
+    let instructionMsgDiv = document.querySelector('.instruct-msg')
+    instructionMsgDiv.innerHTML = `
+        <h2 style="text-align: center;">Instructions</h2>
+        <div class="statusMsg" style="text-align: center"> Connecting to API... </div>
+        <p>The IndicVision PowerBot is a retrieval augmented question-answering chatbot designed to answer queries and generate graphs based on the information content provided in the following documents:</p>
+        <ul>
+        <li>Report of the Comptroller and Auditor General of India on Public Sector Undertakings for the year ended 31 March 2018
+        <li>Report of the Comptroller and Auditor General of India on Public Sector Undertakings for the year ended 31 March 2018
+        </ul>
+    `;
+    let statusMessageDiv = document.querySelector(".statusMsg")
+    try {
+        const response = await fetch(url+"/init");
+        if (response.ok) {
+            statusMessageDiv.textContent = "Connected to API"
+            setTimeout(() => {
+                statusMessageDiv.remove();
+            }, 2000);
+        }
+    } catch (error) {
+        console.error(error);
+        statusMessageDiv.textContent = "Connection failed, please refresh"
+    }
+}
+
 async function sendMessage() {
     const userInput = document.getElementById("userInput").value;
     if (instructionMsgDiv) {
