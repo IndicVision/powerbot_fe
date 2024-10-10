@@ -1,8 +1,26 @@
 body {
     font-family: "Inter", sans-serif;
     display: flex;
+    flex-direction: column;
     margin: 0;
-    background-color: #1a1a1a;
+    background-color: #282727;
+}
+
+.menu {
+    display: flex;
+    background-color: #212020;
+    text-indent: 2vh;
+    font-weight: bold;
+    padding: 2% 0;
+    color: rgba(255, 255, 255, 0.551);
+    align-items: center;
+    box-shadow: 0 0.2vh #202020;
+}
+
+#icon-menu {
+    height: 2.5vh;
+    border-radius: 100px;
+    margin-left: 3%;
 }
 
 ::-webkit-scrollbar {
@@ -10,17 +28,18 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #212121;
+    background: #292929;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #007BFF;
+    background:  #50a3f0;
 }
 
 #chats {
     width: 100%;
-    height: 94.5vh;
+    height: 90vh;
     overflow-y: auto;
+    color: rgb(98, 98, 98);
 }
 
 .response {
@@ -28,6 +47,11 @@ body {
     margin: 2%;
     clear: both;
     text-indent: 3%;
+    line-height: 3vh;
+}
+
+.response p {
+    margin: 1% 4%;
 }
 
 #logo {
@@ -49,8 +73,18 @@ body {
 }
 
 .instruct-msg {
-    color: rgba(255, 255, 255, 0.237);
-    padding: 5%;
+    padding: 0 8%;
+}
+
+.instruct-msg p{
+    color: rgb(98, 98, 98);
+    text-indent: 10%;
+    font-size: 14px;
+}
+
+.instruct-msg li{
+    font-size: 14px;
+    margin:1vh;
 }
 
 .input-box {
@@ -59,7 +93,7 @@ body {
     align-items: center;
     border: none;
     border-radius: 25px;
-    background-color: #272727;
+    background-color: #343434;
     position: absolute;
     bottom: 2%;
     margin: 0 2%;
@@ -71,13 +105,13 @@ body {
     outline: none;
     font-size: 16px;
     border-radius: 10px;
-    background-color: #272727;
+    background-color: inherit;
     color: white;
     text-indent: 29px;
 }
 
 .input-box button {
-    background-color: #272727;
+    background-color: inherit;
     color: white;
     border: none;
     padding: 15px 20px;
