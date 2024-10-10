@@ -1,5 +1,5 @@
 // DOM
-const url = "https://powerbot-be.onrender.com"
+const url = process.env.API_URL;
 const chatBox = document.getElementById('chats');
 var messages = [{
     "role":"system",
