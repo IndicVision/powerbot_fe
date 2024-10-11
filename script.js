@@ -1,5 +1,5 @@
 // DOM
-const url = "https://powerbot-be.onrender.com;
+const url = "https://powerbot-be.onrender.com";
 const chatBox = document.getElementById('chats');
 var messages = [{
     "role":"system",
