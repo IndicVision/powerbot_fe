@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.menu {
+    background-color: rgb(26, 26, 26);
+    padding: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #292929;
+}
+
+::-webkit-scrollbar-thumb {
+    background:  #50a3f0;
+}
+
+#chats {
+    height: 85vh;
+    overflow-y: auto;
+}
+
+#chats pre{
+    background-color: black;
+    text-wrap: pretty;
+    text-indent: 0;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* #chats img {} */
+
+.msg {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message {
+    background-color: rgb(70, 135, 255);
+    float: right;
+    max-width: 50%;
+}
+
+.response {
+    clear: both;
+    text-indent: 5%;
+}
+
+.input-field {
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: 100%;
+}
+
+.input-field input {
+    text-wrap: pretty;
+    border-radius: 10px;
+    background-color: rgb(28, 28, 28);
+    width: 90%;
+    margin: 0 5%;
+    padding: 10px 0;
+    width: fit;
+    border: none;
+    text-indent: 5%;
+    color: white;
+}
+
+.input-field input::placeholder {
+    color: rgba(255, 255, 255, 0.34);
+}
